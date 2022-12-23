@@ -1,9 +1,10 @@
-
 CC=gcc
 CFLAGS = -Wall -g -std=c11
+SRCS=$(wildcard *.c)
+OBJS=$(SRCS:.c=.o)
 
-c:
-	$(CC) $(CFLAGS) $(src) -o c
-
+c: $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o c
+	
 clean:
-	 rm c
+	rm c
