@@ -1,9 +1,15 @@
 
 CC=gcc
-CFLAGS = -Wall -g -std=c11
+CFLAGS = -g -std=c11
+WARN=-Wall
 
 c:
 	$(CC) $(CFLAGS) $(src) -o c
+	./c
+
+warn:
+	$(CC) $(WARN) $(CFLAGS) $(src) -o c
+	./c
 
 clean:
 	 rm c
